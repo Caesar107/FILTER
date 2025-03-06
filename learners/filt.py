@@ -76,7 +76,7 @@ class FILTER():
         f_steps = 1
         pi_steps = 5000
         num_traj_sample = 4
-        outer_steps = 0
+        outer_steps = 100
         mean_rewards = []
         std_rewards = []
         env_steps = []
@@ -186,6 +186,9 @@ class FILTER():
                 std_rewards.append(std_reward)
                 env_steps.append(steps)
                 print("{0} Iteration: {1}".format(int(outer), mean_reward))
+             
+            # **在这里添加路径检查，防止 os.path.join("learners", self.env) 不存在**
+            os.makedirs(os.path.join("learners", self.env), exist_ok=True)
 
             np.savez(os.path.join("learners", self.env, "{0}_rewards_{1}_{2}_{3}".format(name,
                                                                                          n_exp,

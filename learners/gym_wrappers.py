@@ -5,6 +5,12 @@ import os
 import sys
 
 def set_state(env, base_pos, base_vel, joint_states):
+    # 调试代码
+    # print("Environment type:", type(env))
+    # print("Environment attributes:", dir(env))
+    # if hasattr(env, 'env'):
+    #     print("Inner environment type:", type(env.env))
+    #     print("Inner environment attributes:", dir(env.env))
     p = env.env._p
     for i in range(p.getNumBodies()):
         p.resetBasePositionAndOrientation(i,*base_pos[i])
