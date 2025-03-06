@@ -1,6 +1,15 @@
-# fast_irl
+# FILTER: Fast Inverse Reinforcement Learning (Modified)
 
-Contains PyTorch implementation of the FILTER algorithm for fast inverse reinforcement learning.
+This repository is an **extended and modified** version of the original **[FILTER (Fast Inverse Reinforcement Learning)](https://github.com/gkswamy98/fast_irl)**.
+
+### **🔹 Key Improvements**
+- **Extended to support a broader range of RL environments**, including **Gym, MuJoCo, and Atari**.
+- **Integrated KL divergence and reward-based evaluation** for improved benchmarking.
+- **Refactored and optimized the codebase** to enhance stability and adaptability.
+
+This project builds upon the original **FILTER** algorithm from [FILTER: Fast Inverse Reinforcement Learning](https://gokul.dev/filter/), making it applicable to a broader range of reinforcement learning tasks.
+
+---
 
 ## Running Experiments
 To train an expert, run:
